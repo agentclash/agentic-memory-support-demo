@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
     "agentic-memory @ git+https://github.com/agentclash/agentic-memory.git",
-    "openai>=1,<2",
+    "google-genai>=1.68.0,<2",
     "streamlit>=1.44,<2",
 ]
 

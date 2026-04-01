@@ -52,6 +52,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
 pip install -e .
+export GEMINI_API_KEY=your_key_here
 ```
 
 ### 2. Run the benchmark
@@ -66,7 +67,7 @@ memory-support-benchmark
 streamlit run streamlit_app.py
 ```
 
-If `OPENAI_API_KEY` is set, the app uses a real OpenAI-compatible model.
+If `GEMINI_API_KEY` is set, the app uses Gemini both for chatbot generation and for `agentic-memory` embeddings.
 If not, it falls back to a deterministic responder so the demo still works offline.
 
 ## Why The Demo Is Structured This Way
