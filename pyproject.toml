@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentic-memory-support-demo"
+version = "0.1.0"
+description = "A support chatbot demo and deterministic benchmark for the agentic-memory SDK."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "agentic-memory @ git+https://github.com/agentclash/agentic-memory.git",
+    "openai>=1,<2",
+    "streamlit>=1.44,<2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8,<9",
+]
+
+[project.scripts]
+memory-support-benchmark = "agentic_memory_support_demo.benchmark:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
